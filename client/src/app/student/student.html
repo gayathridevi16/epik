@@ -1,0 +1,24 @@
+<div class="search-container">
+  <input type="text" [(ngModel)]="search" (input)="onSearch()" placeholder="Search student"/>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th (click)="sortBy('std_id')">Student ID</th>
+      <th (click)="sortBy('std_name')">Name</th>
+      <th (click)="sortBy('std_address')">Address</th>
+      <th (click)="sortBy('std_class')">Class</th>
+      <th (click)="sortBy('parent_name')">Parent Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of filteredStudents()">
+      <td>{{ student.std_id }}</td>
+      <td>{{ student.std_name }}</td>
+      <td>{{ student.std_address }}</td>
+      <td>{{ student.std_class }}</td>
+      <td>{{ student.parent_name }}</td>
+    </tr>
+  </tbody>
+</table>

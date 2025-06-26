@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+/log
+
+# compiled output
+/server/dist
+/server/node_modules
+*.zip
+*.pdf
+*.png
+*.jpeg
+*.jpg
